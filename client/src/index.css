@@ -28,8 +28,6 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: "Metropoliss", sans-serif;
+  font-family: "Metropolis", sans-serif;
 }
