@@ -1,5 +1,11 @@
 import "./Footer.css";
-import { FaFacebookSquare, FaInstagramSquare, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebookSquare,
+  FaInstagramSquare,
+  FaYoutube,
+  FaAppStoreIos,
+  FaGooglePlay,
+} from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 function Footer() {
   return (
@@ -73,10 +79,10 @@ function Footer() {
               <h3>Download App</h3>
               <li className="footer-icon-row">
                 <a href="#" aria-label="Google Play">
-                  &#xf3ab;
+                  <FaGooglePlay />
                 </a>
                 <a href="#" aria-label="App Store">
-                  &#xf179;
+                  <FaAppStoreIos />
                 </a>
               </li>
             </ul>
