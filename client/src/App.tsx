@@ -10,6 +10,17 @@ const categoies = [
   { imgsrc: "#", title: "Lihat yang Lainnya", url: "#" },
 ];
 
+const mapMarkers = [
+  {
+    position: 0,
+    lat: -0.024751799321233225,
+    lng: 109.33841193739606,
+    name: "Restoran A",
+  },
+  { position: 1, lat: -0.025, lng: 109.338, name: "Restoran B" },
+  // Add more markers as needed
+];
+
 function App() {
   return (
     <>
@@ -36,7 +47,7 @@ function App() {
       <section className="map">
         <h2>Peta Restoran</h2>
         <div className="map-container">
-          <Map />
+          <Map markers={mapMarkers} />
         </div>
       </section>
     </>

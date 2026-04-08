@@ -14,15 +14,20 @@ L.Icon.Default.mergeOptions({
   shadowUrl: markerShadow,
 });
 
-function Map() {
-  const position: [number, number] = [
-    -0.024751799321233225, 109.33841193739606,
-  ];
-
+type MarkerType = {
+  position: number;
+  name: string;
+  lat: number;
+  lng: number;
+};
+type Proops = {
+  markers: MarkerType[];
+};
+function Map({ markers }: Proops) {
   return (
     <>
       <MapContainer
-        center={position}
+        center={[-0.024751799321233225, 109.33841193739606]}
         zoom={16}
         style={{ height: "500px", width: "100%" }}
         scrollWheelZoom={true}
@@ -31,9 +36,11 @@ function Map() {
           url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
           attribution='&copy; <a href="https://carto.com/">CARTO</a>'
         />
-        <Marker position={position}>
-          <Popup>Pontianak, Kalimantan Barat</Popup>
-        </Marker>
+        {markers.map((marker, index) => (
+          <Marker key={index} position={[marker.lat, marker.lng]}>
+            <Popup>{marker.name}</Popup>
+          </Marker>
+        ))}
       </MapContainer>
     </>
   );
