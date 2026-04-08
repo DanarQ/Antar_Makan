@@ -18,7 +18,6 @@ const mapMarkers = [
     name: "Restoran A",
   },
   { position: 1, lat: -0.025, lng: 109.338, name: "Restoran B" },
-  // Add more markers as needed
 ];
 
 function App() {
@@ -45,7 +44,7 @@ function App() {
       </section>
 
       <section className="map">
-        <h2>Peta Restoran</h2>
+        <h2>Peta Restoran Mitra Kami</h2>
         <div className="map-container">
           <Map markers={mapMarkers} />
         </div>

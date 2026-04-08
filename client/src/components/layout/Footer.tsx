@@ -1,5 +1,6 @@
 import "./Footer.css";
-
+import { FaFacebookSquare, FaInstagramSquare, FaYoutube } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 function Footer() {
   return (
     <footer className="footer">
@@ -55,16 +56,16 @@ function Footer() {
               <h3>Connect With Us</h3>
               <li className="footer-icon-row">
                 <a href="#" aria-label="Facebook">
-                  &#xf09a;
+                  <FaFacebookSquare />
                 </a>
                 <a href="#" aria-label="Twitter">
-                  &#xf099;
+                  <FaSquareXTwitter />
                 </a>
                 <a href="#" aria-label="Instagram">
-                  &#xf16d;
+                  <FaInstagramSquare />
                 </a>
                 <a href="#" aria-label="YouTube">
-                  &#xf167;
+                  <FaYoutube />
                 </a>
               </li>
             </ul>
