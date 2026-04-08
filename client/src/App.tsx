@@ -1,6 +1,6 @@
 import "./App.css";
 import FoodCategoryCard from "./components/ui/FoodCategoryCard";
-
+import Map from "./components/ui/Map";
 const categoies = [
   { imgsrc: "#", title: "Nasi Padang", url: "#" },
   { imgsrc: "#", title: "Nasi Kuning", url: "#" },
@@ -35,7 +35,9 @@ function App() {
 
       <section className="map">
         <h2>Peta Restoran</h2>
-        <div className="map-container">{/* Map content would go here */}</div>
+        <div className="map-container">
+          <Map />
+        </div>
       </section>
     </>
   );

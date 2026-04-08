@@ -1,0 +1,143 @@
+.footer {
+  background-color: #1a6b3c;
+  color: #d4f5e2;
+  padding: 3rem 0 1.5rem;
+}
+
+.footer > .container {
+  padding-bottom: 0;
+}
+
+/* ── Top section ── */
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr 1.4fr;
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.footer-brand {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ffffff;
+  align-self: start;
+  padding-top: 0.2rem;
+}
+
+/* ── Column ── */
+.footer-col {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-col h3 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+
+.footer-col li {
+  list-style: none;
+}
+
+.footer-col a {
+  color: #a8e6c3;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: #ffffff;
+}
+
+/* ── Connect + Download stacked ── */
+.footer-connect {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ── Icon rows (social / store) ── */
+.footer-icon-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-icon-row a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(168, 230, 195, 0.5);
+  border-radius: 50%;
+  color: #a8e6c3;
+  font-family: "Font Awesome 5 Free", sans-serif;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.footer-icon-row a:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Divider ── */
+.footer-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 1.5rem;
+}
+
+/* ── Bottom section ── */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-legal {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 2.5rem;
+  row-gap: 0.5rem;
+}
+
+.footer-legal li a {
+  color: #a8e6c3;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size: 0.82rem;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.footer-legal li a:hover {
+  color: #ffffff;
+}
+
+/* ── Copyright ── */
+.footer-copyright {
+  font-size: 0.78rem;
+  color: rgba(212, 245, 226, 0.55);
+  text-align: left;
+}
