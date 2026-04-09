@@ -10,10 +10,10 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({ origin: "http://localhost:5173" }));
 app.use(express.json());
 
-// Test route
-app.get("/api/hello", (req, res) => {
-  res.json({ message: "Server Express berjalan!" });
-});
+import mitraRoutes from "./routes/mitraRoutes.js";
+
+//Routes
+app.use("/mitras", mitraRoutes);
 
 app.listen(PORT, () => {
   console.log(`✅ Server berjalan di http://localhost:${PORT}`);

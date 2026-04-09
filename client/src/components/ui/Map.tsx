@@ -15,7 +15,6 @@ L.Icon.Default.mergeOptions({
 });
 
 type MarkerType = {
-  position: number;
   name: string;
   lat: number;
   lng: number;

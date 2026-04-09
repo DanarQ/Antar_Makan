@@ -2,6 +2,7 @@ import "./App.css";
 import FoodCategoryCard from "./components/ui/FoodCategoryCard";
 import Map from "./components/ui/Map";
 import { images } from "./assets/Gambar";
+import { useEffect, useState } from "react";
 
 const categoies = [
   { imgsrc: images.imgNasipadang, title: "Nasi Padang", url: "#" },
@@ -18,12 +19,11 @@ const categoies = [
 // nanti ini di pindah kan ke database, di handle oleh backend
 const mapMarkers = [
   {
-    position: 0,
     lat: -0.024751799321233225,
     lng: 109.33841193739606,
     name: "Restoran A",
   },
-  { position: 1, lat: -0.025, lng: 109.338, name: "Restoran B" },
+  { lat: -0.025, lng: 109.338, name: "Restoran B" },
 ];
 
 function App() {
