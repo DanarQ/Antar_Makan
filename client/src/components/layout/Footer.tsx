@@ -109,7 +109,7 @@ function Footer() {
         </div>
 
         <p className="footer-copyright">
-          &copy; 2024 Antar Makan. All rights reserved.
+          &copy; 2026 Antar Makan. All rights reserved.
         </p>
       </div>
     </footer>
