@@ -16,6 +16,7 @@ L.Icon.Default.mergeOptions({
 
 type MarkerType = {
   name: string;
+  address: string;
   lat: number;
   lng: number;
 };
@@ -37,7 +38,12 @@ function Map({ markers }: Proops) {
         />
         {markers.map((marker, index) => (
           <Marker key={index} position={[marker.lat, marker.lng]}>
-            <Popup>{marker.name}</Popup>
+            <Popup className="custom-popup">
+              <div className="popup-name">{marker.name}</div>
+              {marker.address && (
+                <div className="popup-address">{marker.address}</div>
+              )}
+            </Popup>
           </Marker>
         ))}
       </MapContainer>

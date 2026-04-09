@@ -16,17 +16,26 @@ const categoies = [
   { imgsrc: images.imgKumpulanmakanan, title: "Lihat yang Lainnya", url: "#" },
 ];
 
-// nanti ini di pindah kan ke database, di handle oleh backend
-const mapMarkers = [
-  {
-    lat: -0.024751799321233225,
-    lng: 109.33841193739606,
-    name: "Restoran A",
-  },
-  { lat: -0.025, lng: 109.338, name: "Restoran B" },
-];
-
 function App() {
+  //mengambil data dari server
+  const [mitraData, setMitraData] = useState<
+    { name: string; address: string; lat: number; lng: number }[]
+  >([]);
+
+  useEffect(() => {
+    fetch("/api/mitras")
+      .then((response) => response.json())
+      .then((data) => setMitraData(data))
+      .catch((error) => console.error("Error fetching mitra data:", error));
+  }, []);
+
+  const mapMarkers = mitraData.map((mitra) => ({
+    name: mitra.name,
+    address: mitra.address,
+    lat: mitra.lat,
+    lng: mitra.lng,
+  }));
+
   return (
     <>
       <section className="hero">
