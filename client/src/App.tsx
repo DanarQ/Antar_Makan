@@ -1,15 +1,21 @@
 import "./App.css";
 import FoodCategoryCard from "./components/ui/FoodCategoryCard";
 import Map from "./components/ui/Map";
+import { images } from "./assets/Gambar";
+
 const categoies = [
-  { imgsrc: "#", title: "Nasi Padang", url: "#" },
-  { imgsrc: "#", title: "Nasi Kuning", url: "#" },
-  { imgsrc: "#", title: "Nasi Goreng", url: "#" },
-  { imgsrc: "#", title: "Mie Ayam", url: "#" },
-  { imgsrc: "#", title: "Sate", url: "#" },
-  { imgsrc: "#", title: "Lihat yang Lainnya", url: "#" },
+  { imgsrc: images.imgNasipadang, title: "Nasi Padang", url: "#" },
+  { imgsrc: images.imgNasikuning, title: "Nasi Kuning", url: "#" },
+  { imgsrc: images.imgNasigoreng, title: "Nasi Goreng", url: "#" },
+  { imgsrc: images.imgMieayam, title: "Mie Ayam", url: "#" },
+  { imgsrc: images.imgSate, title: "Sate", url: "#" },
+  { imgsrc: images.imgSoto, title: "Soto", url: "#" },
+  { imgsrc: images.imgBubur, title: "Bubur", url: "#" },
+  { imgsrc: images.imgWestern, title: "Western", url: "#" },
+  { imgsrc: "", title: "Lihat yang Lainnya", url: "#" },
 ];
 
+// nanti ini di pindah kan ke database, di handle oleh backend
 const mapMarkers = [
   {
     position: 0,
@@ -24,29 +30,35 @@ function App() {
   return (
     <>
       <section className="hero">
-        <h1>Selamat Datang di Antar Makan</h1>
-        <p>Makanan favorit Anda dikirim ke alamat Anda</p>
-        <button className="order-now">Pesan Sekarang</button>
+        <div className="container hero-inner">
+          <h1>Selamat Datang di Antar Makan</h1>
+          <p>Makanan favorit Anda dikirim ke alamat Anda</p>
+          <button className="order-now">Pesan Sekarang</button>
+        </div>
       </section>
 
       <section className="categories">
-        <h2>Kategori Makanan</h2>
-        <div className="category-cards">
-          {categoies.map((category, index) => (
-            <FoodCategoryCard
-              key={index}
-              imageSrc={category.imgsrc}
-              title={category.title}
-              url={category.url}
-            />
-          ))}
+        <div className="container">
+          <h2>Kategori Makanan</h2>
+          <div className="category-cards">
+            {categoies.map((category, index) => (
+              <FoodCategoryCard
+                key={index}
+                imageSrc={category.imgsrc}
+                title={category.title}
+                url={category.url}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="map">
-        <h2>Peta Restoran Mitra Kami</h2>
-        <div className="map-container">
-          <Map markers={mapMarkers} />
+        <div className="container">
+          <h2>Peta Restoran Mitra Kami</h2>
+          <div className="map-container">
+            <Map markers={mapMarkers} />
+          </div>
         </div>
       </section>
     </>

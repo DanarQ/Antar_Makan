@@ -1,9 +1,4 @@
-import Map from "./components/ui/Map";
 function TestApp() {
-  return (
-    <div>
-      <Map />
-    </div>
-  );
+  return <div></div>;
 }
 export default TestApp;

@@ -1,5 +1,97 @@
+/* ── Hero ── */
+.hero {
+  background-color: #1a6b3c;
+  padding: 5rem 0;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  max-width: 560px;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #d4f5e2;
+  max-width: 480px;
+}
+
+.order-now {
+  margin-top: 0.5rem;
+  padding: 0.75rem 2rem;
+  background-color: #2ecc71;
+  color: #ffffff;
+  font-family: "Metropolis", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.order-now:hover {
+  background-color: #27ae60;
+  transform: translateY(-2px);
+}
+
+/* ── Categories ── */
+.categories {
+  padding: 3rem 0;
+  background-color: #f9fefb;
+}
+
+.categories h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a6b3c;
+  margin-bottom: 1.5rem;
+}
+
 .category-cards {
   display: flex;
+  gap: 1rem;
   overflow-x: auto;
-  gap: 10px;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: #a8e6c3 transparent;
+}
+
+.category-cards::-webkit-scrollbar {
+  height: 4px;
+}
+
+.category-cards::-webkit-scrollbar-thumb {
+  background-color: #a8e6c3;
+  border-radius: 2px;
+}
+
+/* ── Map ── */
+.map {
+  padding: 3rem 0 4rem;
+  background-color: #ffffff;
+}
+
+.map h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a6b3c;
+  margin-bottom: 1.5rem;
+}
+
+.map-container {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #e0f2ea;
+  box-shadow: 0 4px 16px rgba(26, 107, 60, 0.1);
 }
