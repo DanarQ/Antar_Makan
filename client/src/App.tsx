@@ -12,7 +12,7 @@ const categoies = [
   { imgsrc: images.imgSoto, title: "Soto", url: "#" },
   { imgsrc: images.imgBubur, title: "Bubur", url: "#" },
   { imgsrc: images.imgWestern, title: "Western", url: "#" },
-  { imgsrc: "", title: "Lihat yang Lainnya", url: "#" },
+  { imgsrc: images.imgKumpulanmakanan, title: "Lihat yang Lainnya", url: "#" },
 ];
 
 // nanti ini di pindah kan ke database, di handle oleh backend

@@ -6,6 +6,7 @@ import imgSate from "./gambar/sate_uicard.jpg";
 import imgSoto from "./gambar/soto_uicard.jpg";
 import imgBubur from "./gambar/bubur_uicard.jpg";
 import imgWestern from "./gambar/burger_uicard.jpg";
+import imgKumpulanmakanan from "./gambar/kumpulanmakanan_uicard.jpg";
 
 export const images = {
   imgNasipadang,
@@ -16,4 +17,5 @@ export const images = {
   imgSoto,
   imgBubur,
   imgWestern,
+  imgKumpulanmakanan,
 };
