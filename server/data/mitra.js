@@ -69,4 +69,14 @@ export default [
     phone: "",
     email: "",
   },
+  {
+    id: 7,
+    lat: -0.02740307738147965,
+    lng: 109.32403373620956,
+    name: "Neo Shabu-Shabu Steak & Shake",
+    address:
+      "Jl. Bukit Barisan No.17, Sungai Bangkong, Kec. Pontianak Kota, Kota Pontianak, Kalimantan Barat 78244",
+    phone: "",
+    email: "",
+  },
 ];

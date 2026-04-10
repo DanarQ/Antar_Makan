@@ -1,17 +1,18 @@
 import "./Map.css";
-import { MapContainer, Marker, TileLayer, useMap, Popup } from "react-leaflet";
+import { MapContainer, Marker, TileLayer, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
-import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
-import markerIcon from "leaflet/dist/images/marker-icon.png";
-import markerShadow from "leaflet/dist/images/marker-shadow.png";
-
-delete (L.Icon.Default.prototype as any)._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: markerIcon2x,
-  iconUrl: markerIcon,
-  shadowUrl: markerShadow,
+const markerIcon = L.divIcon({
+  className: "custom-marker-wrap",
+  html: `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="42" viewBox="0 0 30 42">
+    <path d="M15 1C7.3 1 1 7.3 1 15c0 10.2 14 26 14 26s14-15.8 14-26C29 7.3 22.7 1 15 1z" fill="#1a6b3c"/>
+    <circle cx="15" cy="15" r="7.5" fill="white"/>
+    <circle cx="15" cy="15" r="4" fill="#27ae60"/>
+  </svg>`,
+  iconSize: [30, 42],
+  iconAnchor: [15, 42],
+  popupAnchor: [0, -44],
 });
 
 type MarkerType = {
@@ -37,7 +38,7 @@ function Map({ markers }: Proops) {
           attribution='&copy; <a href="https://carto.com/">CARTO</a>'
         />
         {markers.map((marker, index) => (
-          <Marker key={index} position={[marker.lat, marker.lng]}>
+          <Marker key={index} position={[marker.lat, marker.lng]} icon={markerIcon}>
             <Popup className="custom-popup">
               <div className="popup-name">{marker.name}</div>
               {marker.address && (

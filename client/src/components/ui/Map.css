@@ -1,11 +1,27 @@
+/* ── Custom Marker ── */
+.custom-marker-wrap {
+  background: none !important;
+  border: none !important;
+  filter: drop-shadow(0 4px 10px rgba(26, 107, 60, 0.45));
+  transition: filter 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.custom-marker-wrap:hover {
+  filter: drop-shadow(0 6px 16px rgba(26, 107, 60, 0.65));
+  transform: translateY(-3px) scale(1.1);
+}
+
 /* ── Popup wrapper ── */
 .custom-popup .leaflet-popup-content-wrapper {
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(26, 107, 60, 0.18);
+  border-radius: 14px;
+  box-shadow:
+    0 10px 36px rgba(26, 107, 60, 0.2),
+    0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 0;
   overflow: hidden;
   border: none;
-  min-width: 220px;
+  min-width: 230px;
 }
 
 .custom-popup .leaflet-popup-content {
@@ -26,12 +42,13 @@
 .custom-popup .leaflet-popup-close-button {
   top: 8px !important;
   right: 10px !important;
-  width: 20px !important;
-  height: 20px !important;
+  width: 22px !important;
+  height: 22px !important;
   font-size: 18px !important;
-  line-height: 20px !important;
-  color: rgba(255, 255, 255, 0.85) !important;
+  line-height: 22px !important;
+  color: rgba(255, 255, 255, 0.8) !important;
   padding: 0 !important;
+  z-index: 10 !important;
 }
 
 .custom-popup .leaflet-popup-close-button:hover {
@@ -40,22 +57,48 @@
 
 /* ── Popup content ── */
 .popup-name {
-  background-color: #1a6b3c;
+  background: linear-gradient(135deg, #2ecc71 0%, #1a6b3c 100%);
   color: #ffffff;
   font-size: 0.9rem;
   font-weight: 700;
-  padding: 0.75rem 2rem 0.75rem 1rem;
-  letter-spacing: 0.2px;
+  padding: 0.85rem 2.2rem 0.85rem 1.1rem;
+  letter-spacing: 0.3px;
+  line-height: 1.35;
+  position: relative;
+}
+
+.popup-name::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.18);
 }
 
 .popup-address {
   background-color: #ffffff;
-  color: #444444;
+  color: #555555;
   font-size: 0.78rem;
   font-weight: 400;
-  padding: 0.65rem 1rem;
-  line-height: 1.5;
-  border-top: 1px solid #e0f2ea;
+  padding: 0.75rem 1rem 0.75rem 1.1rem;
+  line-height: 1.55;
+  border-top: 1px solid #e8f5ef;
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.popup-address::before {
+  content: "";
+  display: inline-block;
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #27ae60;
+  border-radius: 50%;
+  margin-top: 4px;
 }
 
 /* ── Attribution ── */
