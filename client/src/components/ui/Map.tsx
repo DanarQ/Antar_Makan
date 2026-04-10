@@ -28,8 +28,8 @@ function Map({ markers }: Proops) {
   return (
     <>
       <MapContainer
-        center={[-0.024751799321233225, 109.33841193739606]}
-        zoom={16}
+        center={[-0.028545847792099788, 109.34076983365841]}
+        zoom={14}
         style={{ height: "500px", width: "100%" }}
         scrollWheelZoom={true}
       >
@@ -38,7 +38,11 @@ function Map({ markers }: Proops) {
           attribution='&copy; <a href="https://carto.com/">CARTO</a>'
         />
         {markers.map((marker, index) => (
-          <Marker key={index} position={[marker.lat, marker.lng]} icon={markerIcon}>
+          <Marker
+            key={index}
+            position={[marker.lat, marker.lng]}
+            icon={markerIcon}
+          >
             <Popup className="custom-popup">
               <div className="popup-name">{marker.name}</div>
               {marker.address && (
