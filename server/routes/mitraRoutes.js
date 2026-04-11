@@ -1,7 +1,12 @@
 import express from "express";
+import { db } from "../db.js";
 
 const router = express.Router();
-import { getMitras } from "../controller/mitraController.js";
 
-router.get("/", getMitras);
+//Get Semua nama mitra
+router.get("/", async (req, res) => {
+  const { rows } = await db.query("SELECT * FROM MitraMakanan");
+  res.json(rows);
+});
+
 export default router;

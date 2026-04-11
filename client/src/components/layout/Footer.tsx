@@ -7,6 +7,7 @@ import {
   FaGooglePlay,
 } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
 function Footer() {
   return (
     <footer className="footer">
@@ -17,7 +18,7 @@ function Footer() {
           <ul className="footer-col">
             <h3>Perusahaan</h3>
             <li>
-              <a href="#">Tentang</a>
+              <NavLink to="/about">Tentang</NavLink>
             </li>
             <li>
               <a href="#">Produk</a>
