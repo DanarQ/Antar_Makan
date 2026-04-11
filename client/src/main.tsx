@@ -4,20 +4,23 @@ import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App.tsx";
 import About from "./pages/About.tsx";
-import Navbar from "./components/layout/Navbar.tsx";
-import Footer from "./components/layout/Footer.tsx";
 import Contact from "./pages/Contact.tsx";
+import Login from "./pages/Login.tsx";
+import FrontPageLayout from "./components/layout/FrontPageLayout.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        {/* Ini Path Layout front page */}
+        <Route element={<FrontPageLayout />}>
+          <Route path="/" element={<App />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
+
+        <Route path="/login" element={<Login />} />
       </Routes>
-      <Footer />
     </BrowserRouter>
   </StrictMode>,
 );

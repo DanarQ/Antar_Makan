@@ -37,12 +37,19 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.15s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
 }
 
 .order-now:hover {
   background-color: #27ae60;
   transform: translateY(-2px);
+}
+
+.order-now a {
+  color: inherit;
+  text-decoration: none;
 }
 
 /* ── Categories ── */
