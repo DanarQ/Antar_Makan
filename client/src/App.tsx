@@ -3,7 +3,7 @@ import FoodCategoryCard from "./components/ui/FoodCategoryCard";
 import Map from "./components/ui/Map";
 import { images } from "./assets/Gambar";
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const categoies = [
   { imgsrc: images.imgNasipadang, title: "Nasi Padang", url: "#" },
@@ -44,7 +44,7 @@ function App() {
           <h1>Selamat Datang di Antar Makan</h1>
           <p>Makanan favorit Anda dikirim ke alamat Anda</p>
           <button className="order-now">
-            <NavLink to="/login">Pesan Sekarang</NavLink>
+            <Link to="/login">Pesan Sekarang</Link>
           </button>
         </div>
       </section>

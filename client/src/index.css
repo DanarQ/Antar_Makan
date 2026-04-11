@@ -34,6 +34,9 @@
   font-family: "Metropolis", sans-serif;
   font-size: 1.2rem;
 }
+.leaflet-control-attribution {
+  display: none;
+}
 
 html,
 body,

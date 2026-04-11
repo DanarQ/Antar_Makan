@@ -1,34 +1,35 @@
 import { useState } from "react";
-import "./Login.css";
+import "./Register.css";
 import { Link, useNavigate } from "react-router-dom";
-function Login() {
-  const [form, setForm] = useState({ email: "", password: "" });
+function Register() {
+  const [form, setForm] = useState({ name: "", email: "", password: "" });
   const [err, setErr] = useState("");
   const navigate = useNavigate();
-
   return (
     <div>
-      <h2>Selamat datang kembali</h2>
-      {/* {err && <p style={{color: 'red'}}>{err}</p>} */}
+      <h2>Daftar</h2>
       <form>
         <input
+          type="nama"
+          placeholder="Nama"
+          onChange={(e) => setForm({ ...form, name: e.target.value })}
+        />
+        <input
           type="email"
-          placeholder="email"
-          value={form.email}
+          placeholder="Email"
           onChange={(e) => setForm({ ...form, email: e.target.value })}
         />
         <input
           type="password"
-          placeholder="password"
-          value={form.password}
+          placeholder="Password"
           onChange={(e) => setForm({ ...form, password: e.target.value })}
         />
-        <button type="submit">Masuk</button>
+        <button type="submit">Daftar</button>
       </form>
       <p>
-        Belum punya akun? <Link to="/register"> Daftar</Link>
+        Sudah punya akun? <Link to="/login">Masuk</Link>
       </p>
     </div>
   );
 }
-export default Login;
+export default Register;
