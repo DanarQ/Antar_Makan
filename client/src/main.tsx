@@ -8,6 +8,9 @@ import Contact from "./pages/Contact.tsx";
 import Login from "./pages/Login.tsx";
 import FrontPageLayout from "./components/layout/FrontPageLayout.tsx";
 import Register from "./pages/Register.tsx";
+import DashboardUser from "./pages/DashboardUser.tsx";
+import DashboardDriver from "./pages/DashboardDriver.tsx";
+import ProtectedRoute from "./components/ProtectedRoute.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -22,6 +25,23 @@ createRoot(document.getElementById("root")!).render(
 
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute allowedRole="user">
+              <DashboardUser />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard/driver"
+          element={
+            <ProtectedRoute allowedRole="driver">
+              <DashboardDriver />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
