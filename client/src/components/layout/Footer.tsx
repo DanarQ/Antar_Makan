@@ -7,7 +7,7 @@ import {
   FaGooglePlay,
 } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer className="footer">
@@ -18,7 +18,7 @@ function Footer() {
           <ul className="footer-col">
             <h3>Perusahaan</h3>
             <li>
-              <NavLink to="/about">Tentang</NavLink>
+              <Link to="/about">Tentang</Link>
             </li>
             <li>
               <a href="#">Produk</a>
@@ -62,16 +62,28 @@ function Footer() {
             <ul className="footer-col">
               <h3>Connect With Us</h3>
               <li className="footer-icon-row">
-                <a href="#" aria-label="Facebook">
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  aria-label="Facebook"
+                >
                   <FaFacebookSquare />
                 </a>
-                <a href="#" aria-label="Twitter">
+                <a href="https://x.com" target="_blank" aria-label="Twitter">
                   <FaSquareXTwitter />
                 </a>
-                <a href="#" aria-label="Instagram">
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  aria-label="Instagram"
+                >
                   <FaInstagramSquare />
                 </a>
-                <a href="#" aria-label="YouTube">
+                <a
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  aria-label="YouTube"
+                >
                   <FaYoutube />
                 </a>
               </li>
@@ -79,10 +91,18 @@ function Footer() {
             <ul className="footer-col">
               <h3>Download App</h3>
               <li className="footer-icon-row">
-                <a href="#" aria-label="Google Play">
+                <a
+                  href="https://play.google.com"
+                  target="_blank"
+                  aria-label="Google Play"
+                >
                   <FaGooglePlay />
                 </a>
-                <a href="#" aria-label="App Store">
+                <a
+                  href="https://apps.apple.com"
+                  target="_blank"
+                  aria-label="App Store"
+                >
                   <FaAppStoreIos />
                 </a>
               </li>

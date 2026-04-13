@@ -26,6 +26,8 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
+        {/* Ini jika user sudah login, jika memiliki role 
+        yang sesuai akan divagiasikan sesuai dengan role nya */}
         <Route
           path="/dashboard"
           element={
