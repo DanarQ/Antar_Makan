@@ -10,8 +10,13 @@ function ProtectedRoute({ children, allowedRole }: Props) {
   const user = JSON.parse(localStorage.getItem("user") || "{}");
 
   if (!token) return <Navigate to="/login" replace />;
-  if (user.role !== allowedRole) {
-    return <Navigate to={user.role === "driver" ? "/dashboard/driver" : "/dashboard"} replace />;
+  if (user.roles !== allowedRole) {
+    return (
+      <Navigate
+        to={user.roles === "driver" ? "/dashboard/driver" : "/dashboard"}
+        replace
+      />
+    );
   }
 
   return <>{children}</>;
